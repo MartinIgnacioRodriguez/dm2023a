@@ -154,9 +154,11 @@ EstimarGanancia_lightgbm  <- function( x )
                           boost_from_average= TRUE,
                           feature_pre_filter= FALSE,
                           verbosity= -100,
+                          # Specifies the minimum gain a leaf has to have to perform a split. Tuning range: (0, 15).
                           # Reduction in training loss that results from adding a split point. 
                           # 0.0 means “there is no improvement that is too small”.
-                          # Increase to reduce training time.
+                          # If you limit tree growth by increasing the parameter,
+                          # the resulting smaller trees will lead to a faster training time — but this can also decrease accuracy
                           min_gain_to_split= 0.0, #por ahora, lo dejo fijo
                           # Reduce to reduce training time.
                           max_bin= 31,            #por ahora, lo dejo fijo
