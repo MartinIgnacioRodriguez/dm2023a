@@ -79,6 +79,8 @@ setwd( PARAM$home )
 dataset_input  <- paste0( "./exp/", PARAM$exp_input, "/dataset.csv.gz" )
 dataset  <- fread( dataset_input )
 
+# Agrego columna para calcular el weight de cada mes CAMBIO MR
+dataset[  , weight :=  ifelse( foto_mes > 202007, 2, 1) ] #CAMBIO MR
 
 #creo la carpeta donde va el experimento
 dir.create( paste0( "./exp/", PARAM$experimento, "/"), showWarnings = FALSE )
@@ -117,9 +119,6 @@ dataset[ foto_mes %in% PARAM$train$validation, fold_validate := 1L ]
 
 dataset[  , fold_test := 0L ]
 dataset[ foto_mes %in% PARAM$train$testing, fold_test := 1L ]
-
-# Agrego columna para calcular el weight de cada mes CAMBIO MR
-dataset[  , weight :=  ifelse( foto_mes > 202007, 2, 1) ] #CAMBIO MR
 
 fwrite( dataset[ fold_train + fold_validate + fold_test >= 1, ],
         file= "dataset_training.csv.gz",
