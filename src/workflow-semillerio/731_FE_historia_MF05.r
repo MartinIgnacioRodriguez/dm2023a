@@ -4,6 +4,7 @@
 # PARAM$exp_input  <- "DR7210" MR: Tomo como input el WK MF01
 # PARAM$RandomForest$semilla  <- 102191    # cambiar por la propia semilla
 # PARAM$CanaritosAsesinos$semilla  <- 200177   # cambiar por la propia semilla
+# agrego variables de aceleracion
 
 # ---------------------------------------------------------------------------------------------------------------------
 
