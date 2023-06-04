@@ -5,6 +5,8 @@
 # PARAM$RandomForest$semilla  <- 102191    # cambiar por la propia semilla
 # PARAM$CanaritosAsesinos$semilla  <- 200177   # cambiar por la propia semilla
 # agrego variables de aceleracion
+# PARAM$RandomForest$run
+# PARAM$CanaritosAsesinos$ratio
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -60,7 +62,8 @@ PARAM$Tendencias2$ratioavg  <- FALSE
 PARAM$Tendencias2$ratiomax  <- FALSE
 
 
-PARAM$RandomForest$run  <- TRUE
+# PARAM$RandomForest$run  <- TRUE #CAMBIO MR
+PARAM$RandomForest$run  <- FALSE #CAMBIO MR
 PARAM$RandomForest$num.trees  <- 20
 PARAM$RandomForest$max.depth  <-  4
 PARAM$RandomForest$min.node.size  <- 1000
@@ -68,7 +71,8 @@ PARAM$RandomForest$mtry  <- 40
 # PARAM$RandomForest$semilla  <- 102191    # cambiar por la propia semilla #CAMBIO MR
 PARAM$RandomForest$semilla  <-  100043   # cambiar por la propia semilla #CAMBIO MR
 
-PARAM$CanaritosAsesinos$ratio  <- 0.0        #varia de 0.0 a 2.0, si es 0.0 NO se activan
+# PARAM$CanaritosAsesinos$ratio  <- 0.0        #varia de 0.0 a 2.0, si es 0.0 NO se activan #CAMBIO MR
+PARAM$CanaritosAsesinos$ratio  <- 1        #varia de 0.0 a 2.0, si es 0.0 NO se activan #CAMBIO MR
 PARAM$CanaritosAsesinos$desvios  <- 4.0      #desvios estandar de la media, para el cutoff
 # PARAM$CanaritosAsesinos$semilla  <- 200177   # cambiar por la propia semilla #CAMBIO MR
 PARAM$CanaritosAsesinos$semilla  <- 100057   # cambiar por la propia semilla #CAMBIO MR
