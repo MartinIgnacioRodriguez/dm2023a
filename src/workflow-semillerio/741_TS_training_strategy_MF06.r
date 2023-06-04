@@ -3,7 +3,9 @@
 # PARAM$experimento <- "TS7410"
 # PARAM$exp_input  <- "FE7310" # MR: Tomo como input el WK MF01
 # PARAM$train$semilla  <- 102191  # cambiar por su propia semilla  !!!
-# PARAM$train$testing      <- c( 202107 ) 
+# PARAM$train$training
+# PARAM$train$validation
+# PARAM$train$testing
 
 # ---------------------------------------------------------------------------------------------------------------------
 
